@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Pricing Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+	  
+    }
+    header{
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color:red;
+      padding: 1rem;
+	  
+    }
+    .pricing {
+      float:left;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+	  margin-left:10px;
+	  margin-bottom:10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .toggle-container {
+      padding:10px;
+	  display:flex;
+	  margin-bottom:10px;
+	  height:28px;
+	  background-color:aqua;
+	  
+	  
+    }
+	#mar{
+	margin-left:5%}
+	#convert{
+            display:flex;
+			flex-direction:column;
+            bottom: 10;
+            width: 100%;
+            height: 40px;
+            background: grey;
+			}
+	#con{
+		flex-direction:column;
+	}
+	#contact{
+            bottom: 0;
+            width: 100%; 
+			background: black;
+			text-align:center;
+			padding:0px;
+			color:white;
+	}
+	#view{
+	text-decoration:none;
+	}
+	#book{
+	text-decoration:none;
+	float:right;
+	}
+	
+</style>
+</head>
+	<body>
+
+		<header>
+			<h1>Room Booking</h1>
+		</header>
+
+		<nav>
+			<a href="#home">Home</a>
+			<a href="#convert">convert</a>
+			<a href="#contact">Contact</a>
+		</nav>
+		<section>
+		<div class="toggle-container">
+			<label id ="cur" for="currencyToggle">Toggle Currency:</label>
+			<input type="checkbox" id="currencyToggle" onchange="toggleCurrency()">
+			<marquee width="70%" direction="left" id="mar">
+				Click on checkbox of toggle currency to change cost of rooms into other currency
+			</marquee>
+		</div>
+		<div class="pricing">
+			<h2 style="text-align:center">Taj Lake Palace</h2>
+			<img src="taj.jpg" style="width:250px;height:150px" />
+			<p><b>Location : </b>India</p>
+			<h4><u>Room prices:</u></h4>
+			<div id="priceContainer1" style="width:100%">
+			<!-- Pricing content will be dynamically added here -->
+			</div>
+			<button id="view"><a id="view" href="https://www.tajhotels.com/en-in/taj/taj-lake-palace-udaipur/">View More</a></button>
+			<button id="book"><a id="book" href="https://www.online-reservations.com/?hotelid=74732&msclkid=53e5c440a10e1006f736a1eb0e020d66">Book Now</a></button>
+		</div>
+		<div class="pricing">
+			<h2 style="text-align:center">Royal Malewane</h2>
+			<img src="royal.jpg" style="width:250px;height:150px"/>
+			<p><b>Location : </b>South Africa</p>
+			<h4><u>Room prices:</u></h4>
+			<div id="priceContainer2">
+				<!-- Pricing content will be dynamically added here -->
+			</div>
+			<button id="view"><a id="view" href="https://www.theroyalportfolio.com/royal-malewane/">View More</a></button>
+			<button id="book"><a id="book" href="https://www.online-reservations.com/?hotelid=1309260&latitude=-24.51536544&longitude=31.16262887">Book Now</a></button>
+		</div>
+		<div class="pricing">
+			<h2 style="text-align:center">Burj Al Arab</h2>
+			<img src="dubai.jpg" style="width:250px;height:150px"/>
+			<p><b>Location : </b>Dubai</p>
+			<h4><u>Room prices:</u></h4>
+			<div id="priceContainer3">
+				<!-- Pricing content will be dynamically added here -->
+			</div>
+			<button id="view"><a id="view" href="https://www.jumeirah.com/en/stay/dubai/burj-al-arab-jumeirah?&&&&gclid=5568171a5d1915d3da1572b1ef23118b&gclsrc=3p.ds&msclkid=5568171a5d1915d3da1572b1ef23118b&utm_source=bing&utm_medium=cpc&utm_campaign=BG-%7BBAA%7D-%5BWW_AO%5D-BR-(EN)-Phrase&utm_term=burj%20al%20arab&utm_content=Burj%20Al%20Arab%20-US-EN-Phrase">View More</a></button>
+			<button id="book"><a id="book" href="https://www.online-reservations.com/?hotelid=74732&msclkid=53e5c440a10e1006f736a1eb0e020d66">Book Now</a></button>
+		</div>
+		<div class="pricing">
+			<h2 style="text-align:center">Grand Hotel Tremezzo</h2>
+			<img src="italy.jpg" style="width:250px;height:150px"/>
+			<p><b>Location : </b>Italy</p>
+			<h4><u>Room prices:</u></h4>
+			<div id="priceContainer4">
+				<!-- Pricing content will be dynamically added here -->
+			</div>
+			<button ><a href="https://www.lartisien.com/hotel/grand-hotel-tremezzo?msclkid=03aa84ff364014459ea8e15487a72bc0&utm_source=bing&utm_medium=cpc&utm_campaign=Bing%2FEN_S-Hotels_ACQ_TopMidOthers%20%5BJunto%5D&utm_term=grand%20hotel%20tremezzo%20como%20lake&utm_content=ITA_Grand%20Hotel%20Tremezzo%20-%20%23462" id="view">View More</a></button>
+			<button id="book"><a id="book" href="https://www.online-reservations.com/?hotelid=80996&latitude=45.98484591&longitude=9.228500202">Book Now</a></button>
+		</div>
+		
+
+		<script>
+		const pricingData1 = [
+			{ plan: 'Basic', dollars: 5, rupees: 420 },
+			{ plan: 'Standard', dollars: 6.5, rupees: 545 },
+			{ plan: 'Premium', dollars: 8, rupees: 665 },
+			{ plan: 'Pro', dollars: 10, rupees: 850 },
+			{ plan: 'Enterprise', dollars: 12, rupees: 1000 },
+		];
+		const pricingData2 = [
+			{ plan: 'Basic', dollars: 6, rupees: 500 },
+			{ plan: 'Standard', dollars: 8, rupees: 665 },
+			{ plan: 'Premium', dollars: 10, rupees: 835 },
+			{ plan: 'Pro', dollars: 12, rupees: 1000 },
+			{ plan: 'Enterprise', dollars: 14, rupees: 1165 },
+		];
+
+		const pricingData3 = [
+			{ plan: 'Basic', dollars: 13, rupees: 1080 },
+			{ plan: 'Standard', dollars: 16, rupees: 1330 },
+			{ plan: 'Premium', dollars: 19, rupees: 1580 },
+			{ plan: 'Pro', dollars: 22, rupees: 1830},
+			{ plan: 'Enterprise', dollars: 25, rupees: 2080 },
+		];
+	    const pricingData4 = [
+			{ plan: 'Basic', dollars: 8, rupees: 665 },
+			{ plan: 'Standard', dollars: 15, rupees: 1250 },
+			{ plan: 'Premium', dollars: 20, rupees: 1665 },
+			{ plan: 'Pro', dollars: 25, rupees: 2080},
+			{ plan: 'Enterprise', dollars: 30, rupees: 2500 },
+		];
+
+		function toggleCurrency() {
+			const toggleSwitch = document.getElementById('currencyToggle');
+
+			[pricingData1, pricingData2,pricingData3,pricingData4].forEach((pricingData, containerIndex) => {
+			const containerId = `priceContainer${containerIndex + 1}`;
+			const priceContainer = document.getElementById(containerId);
+			const currency = toggleSwitch.checked ? 'rupees' : 'dollars';
+
+			priceContainer.innerHTML = ""; 
+
+			pricingData.forEach(item => {
+              const price = item[currency];
+              const planElement = document.createElement('p');
+              planElement.textContent = `${item.plan}: ${price} ${currency.toUpperCase()}`;
+			  priceContainer.appendChild(planElement);
+			});
+		  });
+		}
+
+		toggleCurrency();
+		function convertCurrency() {
+			var amountInput = parseFloat(document.getElementById('amountInput').value);
+			var conversionCheckbox = document.getElementById('conversionCheckbox');
+			var resultParagraph = document.getElementById('resultParagraph');
+			var hell=document.getElementById('hel');
+			if (!isNaN(amountInput)) {
+				if (conversionCheckbox.checked) {
+					// Rupees to Dollars
+					var convertedAmount = amountInput * 0.014;
+					resultParagraph.textContent = 'Converted Amount: $' + convertedAmount.toFixed(2);
+				} else {
+          // Dollars to Rupees
+					var convertedAmount = amountInput * 73.23; 
+					resultParagraph.textContent = 'Converted Amount: ₹' + convertedAmount.toFixed(2);
+				}
+			} else {
+				alert('Please enter a valid number.');
+			}
+		}
+		function con(){
+			var con=document.getElementById('conversionCheckbox');
+			var hello=document.getElementById('hello');
+			if(con.checked){
+				hello.innerHTML='Enter amount in Rupees';
+			}
+			else{
+				hello.innerHTML='Enter amount in Dollars';
+			}
+		}
+		</script>
+		
+		<div id="convert">
+			<p id="hel">Currency Convert</p>
+			<div id="con">
+			<label>Toggle corrency:</label><input type="checkbox" id="conversionCheckbox" onclick="con()"/>
+			</div>
+			<div id="con">
+			<p id="hello">Enter amount in Dollars</p>
+			<input type="number" id="amountInput" placeholder="Enter Amount" style="width:20%">
+			<button onclick="convertCurrency()" style="width:flex">Convert</button></div>
+			<p id="resultParagraph">Converted Amount: </p>
+		
+		<div id="contact">
+		<h3>contact us:</h3>
+		<p><b>Email: </b>Example@gmail.com</p>
+		<p><b>Phone Number: </b>+91 6301234567</p>
+		</div></div>
+	</body>
+</html>
